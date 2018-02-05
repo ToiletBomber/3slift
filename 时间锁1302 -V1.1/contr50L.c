@@ -1655,7 +1655,6 @@ void SxBUF_Init()
 //时钟时间节奏准确
 void timer0(void) interrupt 1 /*T0中断*/
 {
-	unsigned char xxx;
 	TH0=(65536-Crystal/12000*InitTime/1000)/256;
 	TL0=(65536-Crystal/12000*InitTime/1000)%256;
 
