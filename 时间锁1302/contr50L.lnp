@@ -1,0 +1,4 @@
+"contr50L.obj" 
+TO "contr50L" 
+RAMSIZE(256) 
+XDATA( 0X0000-0X0EFF )
