@@ -1440,8 +1440,7 @@ bit PowerCheck()   //zjb
 	return FlagPowerH|FlagPowerL|FlagLosePhase|FlagErrorPhase;
 }
 void OverLoadCheck()
-{
-	unsigned char xx;	
+{	
 	if(OverLoadCount>500)//200us*4*500=400ms
 	{
 		OverLoad=OverLoad1/OverLoadCount;
@@ -1454,12 +1453,12 @@ void OverLoadCheck()
 //	}
 //	OverLoad = OverLoad1/64;
 //	OverLoad1 = 0;
-//	 	SBUF = OverLoad>>8;
-//		 TI=0;
-//		while(!TI);
-//		TI=0;
-//		SBUF = OverLoad;
-//		while(!TI);
+	 	SBUF = OverLoad>>8;
+		 TI=0;
+		while(!TI);
+		TI=0;
+		SBUF = OverLoad;
+		while(!TI);
 	if((OverLoad>=576)&&(!FlagRun)&&(!UP))	 //¹ýÔØ  
 	{
 		if(!FlagRun) //°´Å¥Î´´¥·¢
